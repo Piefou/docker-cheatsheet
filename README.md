@@ -59,3 +59,12 @@
 
 -f : force les container en cours d'exécution
 container : id/nom d'un container, ou liste d'ids via $(docker container -q)
+
+### Dockerfile
+
+FROM image:tag [as alias]
+COPY [--from=alias] : copie un fichier
+ADD : copie un fichier, peut télécharger via une URL, désarchive automatiquement les .tar.gz
+VOLUME : persiste un dossier sur l'hôte
+USER :
+HEALTHCHECK :
