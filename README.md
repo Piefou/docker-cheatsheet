@@ -20,6 +20,12 @@
 
 --cpus : limite l'allocation cpu ; Décimal < 1 : pourcentage du nombre de cpus disponibles ; Entier >= 1 : nombre de cpus. Ex : --cpus 2, --cpus 0.5
 
+--rm : supprime le filesystem du container une fois terminé
+
+--user : spécifie l'utilisateur à utiliser
+
+--restart=on-failure : redémarrage automatique du container
+
 ### Construction d'une image
 
 `docker image build [opt] (path | url | -)`
@@ -31,3 +37,25 @@
 `docker image push (image:tag)`
 
 `docker commit [opt] container (image:tag)`
+
+### Administration des containers
+
+`docker container ls [opt]`
+
+-q : indique seulement les id
+-a : liste aussi les containers arrêtés
+
+`docker container logs [opt] (container)`
+
+-f : avec suivi
+
+`docker container inspect [opt] (container)`
+
+-f [pattern] : Indique une part de l'arbre JSON via GoTemplate. Ex : -f '{{ .Name }}'
+
+`docker container exec -it (container) /bin/sh` Lance un shell interactif dans le container
+
+`docker container (start | stop | rm) [opt] (container)`
+
+-f : force les container en cours d'exécution
+container : id/nom d'un container, ou liste d'ids via $(docker container -q)
