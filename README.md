@@ -26,7 +26,13 @@
 
 `docker image push (image:tag)`
 
+`docker image ls`
+
+`docker image rm (image:tag)`
+
 `docker commit [opt] container (image:tag)`
+
+`docker tag (image:tag) (repo/image:tag)`
 
 ### Administration des containers
 
@@ -45,7 +51,7 @@
 
 `docker container exec -it (container) /bin/sh` Lance un shell interactif dans le container
 
-`docker container (start | stop | rm) [opt] (container)`
+`docker container (start | stop | rm | kill) [opt] (container)`
 
 * `-f` force les container en cours d'exécution
 * container : id/nom d'un container, ou liste d'ids via $(docker container -q)
