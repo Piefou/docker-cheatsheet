@@ -43,6 +43,7 @@
 `docker container ls [opt]`
 
 -q : indique seulement les id
+
 -a : liste aussi les containers arrêtés
 
 `docker container logs [opt] (container)`
