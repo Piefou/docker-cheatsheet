@@ -15,6 +15,15 @@
 * `--rm` supprime le filesystem du container une fois terminé
 * `--user` spécifie l'utilisateur à utiliser
 * `--restart=on-failure` redémarrage automatique du container
+* `--network [reseau]` indique le réseau par défaut sur lequel se connecter
+
+### Gestion des réseaux
+
+`docker network ls` Liste les réseaux disponibles
+
+`docker network create (reseau)` Créer un réseau
+
+`docker network connect (reseau) (container)` Connecte un container à un réseau
 
 ### Construction d'une image
 
