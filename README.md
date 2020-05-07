@@ -8,7 +8,7 @@
 * `-d` en arrière-plan
 * `-p [hote:container]` mappe un port du container sur l'hôte
 * `-P` mapping automatique des ports
-* `-v [hote:container:ro]` relie un volume du container à l'hôte, ':ro' pour read-only. Ex : -v /var/path:/data/path:ro
+* `-v [hote:container:ro]` relie un volume du container à l'hôte, ':ro' pour read-only. Ex : -v /var/path:/data/path:ro; -v volume_nomme:/data/path
 * `--name` nomme le container
 * `--memory` limite l'allocation mémoire. Ex : --memory 256m
 * `--cpus` limite l'allocation cpu ; Décimal < 1 : pourcentage du nombre de cpus disponibles ; Entier >= 1 : nombre de cpus. Ex : --cpus 2, --cpus 0.5
@@ -16,6 +16,12 @@
 * `--user` spécifie l'utilisateur à utiliser
 * `--restart=on-failure` redémarrage automatique du container
 * `--network [reseau]` indique le réseau par défaut sur lequel se connecter
+
+### Gestion des volumes
+
+`docker volume ls` Liste les volumes existants
+
+`docker volume create (volume)` Créer un volume nommé
 
 ### Gestion des réseaux
 
@@ -83,4 +89,6 @@ HEALTHCHECK :
 
 ### Misc
 
-`docker run --net=host --ipc=host --uts=host --pid=host -it --security-opt=seccomp=unconfined --privileged --rm -v /:/host alpine /bin/sh` Depuis Windows, pour se connecter à la VM hébergeant le daemon Docker
+`docker container run --net=host --ipc=host --uts=host --pid=host -it --security-opt=seccomp=unconfined --privileged --rm -v /:/host alpine /bin/sh` Depuis Windows, pour se connecter à la VM hébergeant le daemon Docker
+
+`docker container run -d (container) tail -f` Permet de lancer un container en arrière-plan avec une commande "sans fin"
