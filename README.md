@@ -14,7 +14,7 @@
 * `--cpus` limite l'allocation cpu ; Décimal < 1 : pourcentage du nombre de cpus disponibles ; Entier >= 1 : nombre de cpus. Ex : --cpus 2, --cpus 0.5
 * `--rm` supprime le filesystem du container une fois terminé
 * `--user` spécifie l'utilisateur à utiliser
-* `--restart=on-failure` redémarrage automatique du container
+* `--restart=[on-failure | always]` redémarrage automatique du container
 * `--network [reseau]` indique le réseau par défaut sur lequel se connecter
 
 ### Gestion des volumes
