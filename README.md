@@ -68,6 +68,8 @@
 
 `docker container exec -it (container) /bin/sh` Lance un shell interactif dans le container
 
+`docker container run -it -v (chemin asbolu hôte):(chemin absolu container) (image:tag) /bin/sh` Lance un shell interactif avec l'image donné en montant un répertoire
+
 `docker container (start | stop | rm | kill) [opt] (container)`
 
 * `-f` force les container en cours d'exécution
