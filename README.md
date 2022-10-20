@@ -66,7 +66,7 @@
 
 * `-f [pattern]` Indique une part de l'arbre JSON via GoTemplate. Ex : -f '{{ .Name }}'
 
-`docker container exec -it (container) /bin/sh` Lance un shell interactif dans le container
+`docker container exec -it (container) /bin/sh` Lance un shell interactif dans un container en cours d'exécution
 
 `docker container run -it -v (chemin asbolu hôte):(chemin absolu container) (image:tag) /bin/sh` Lance un shell interactif avec l'image donné en montant un répertoire
 
